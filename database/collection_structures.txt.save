@@ -1,0 +1,23 @@
+db.books.insertMany([
+    {
+        1: {
+            "Sets": {
+                1: {
+                    "Introduction": {
+                         1: {
+                          "Definition"   
+                        }           
+                }
+            }    
+        }
+    }
+])
+
+db.books.insertMany([
+    "sub_topic_1": {
+        "status": "true"
+    },
+    "sub_topic_2": {
+        "status": "false"
+    }
+])

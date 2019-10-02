@@ -1,0 +1,14 @@
+db.books.insertMany([
+    {
+        1: {
+            "Sets": {
+                1: {
+                    "Introduction": {
+                         1: {
+                          "Definition"   
+                        }           
+                }
+            }    
+        }
+    }
+])

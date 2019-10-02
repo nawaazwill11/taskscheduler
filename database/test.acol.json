@@ -1,0 +1,5 @@
+{ 
+    "firstname" : "Nawaaz", 
+    "lastname" : "Kortiwala", 
+    "getFullName" : "function () { return this.firstname + ' ' + this.lastname;}"
+}

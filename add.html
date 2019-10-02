@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="css/add.css">
+</head>
+<body>
+    <div class="containter">
+        <div class="root">
+            <div class="action-panel">
+                <h2>Action</h2>
+                <div id="task-table">
+                    <div class="task-row">
+                        <input id= "" class="task-cell" type="text" name="tid" value="" placeholder="Task ID">
+                        <input id= "" class="task-cell" type="text" name="tname" placeholder="Task name">
+                        <input id= "" class="task-cell" type="text" name="time" placeholder="Time taken ">
+                        <div class="subtask-box">
+                            <input id= "" class="subtask" type="checkbox" name="hasSubtask">
+                            <span>Subtask</span>
+                        </div>
+                        </label>
+                    </div>
+                </div>
+                <button id="add">Add</button>
+            </div>
+            <div class="output-panel">
+                <h2>Tree</h2>
+                <div id="tree">
+                    <div class="level">
+                        <div class="level-left">
+                            a
+                        </div>
+                        <div class="level-right">
+                            b
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script>
+        var addTree = function() {
+            var div = document.createElement('div');
+            div.className = 'level';
+            var left = document.createElement('div');
+            left.className = 'level-left';
+            var right = document.createElement('div');
+            right.className = 'level-right';
+            div.appendChild(left);
+            div.appendChild(right);
+            document.getElementById('tree').append(div);
+        };
+
+        var addTask = function() {
+            var div = document.createElement('div');
+            div.className = 'task-row';
+            var task_row_el = {id: 'Task ID', name: 'Task name', time: 'Time taken'};
+            for(let key in task_row_el) {
+                let inp = document.createElement('input');
+                console.log(task_row_el[key]);
+                inp.placeholder = task_row_el[key];
+                inp.type = 'text';
+                inp.className = 'task-cell';
+                task_row_el[key] = inp
+            }
+            let sub_box = document.createElement('div');
+            sub_box.className = 'subtask-box';
+            let inp = document.createElement('div');
+            let span = document.createElement('span');
+            span.innerText = "Subtask";
+            sub_box.appendChild(inp);
+            sub_box.appendChild(span);
+            task_row_el[sub_box] = sub_box;
+
+            for(let key in task_row_el) {
+                div.appendChild(task_row_el[key]);
+            }
+            document.getElementById('task-table').appendChild(div);
+        }
+
+        $(".action-panel").on('click', '#add', function (e) {
+            e.stopPropagation();
+            addTask();
+            addTree();
+            
+        });  
+
+    </script>
+</body>
+</html>

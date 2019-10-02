@@ -1,0 +1,45 @@
+.container {
+    width: 100%;
+    padding: 10px;
+}
+.root {
+    display: grid;  
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    grid-auto-rows: minmax(200px, auto);
+    width: 90%;
+    padding: 10px;
+    box-shadow: 0px 0px 3px 0px lightgrey;
+}
+.action-panel {
+    border-bottom: 1px solid lightgrey;
+}
+#task-table {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+}
+.task-row {
+    display: grid;
+}
+.task-cell {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+#tree {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-rows: minmax(50px, auto);
+    row-gap: 10px;
+}
+.level {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    column-gap: 10px;
+}
+.level-left {
+    background-color: pink;
+}
+.level-right {
+    background-color: lightgreen;
+}
