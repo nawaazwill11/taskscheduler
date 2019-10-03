@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task Maker</title>
+    <style>
+      .task-row input[type=text] {
+        width: 100px;
+      }
+      .task-row {
+        display: grid;
+        margin-left: 20px;
+      }
+      .bas {
+        position: relative;
+        left: 130px;
+        top: -68px;
+      }
+      .bas-root {
+        position: unset;
+      }
+      .bas-hide {
+        display: none;
+      }
+    </style>
+</head>
+<body>
+  <div id="container">
+    <div id="t">
+      <div id="t1" class="task-row">
+        <input type="text" class="task-cell" name="name">
+        <input type="text" class="task-cell" name="time">
+        <div class="subbox">
+          <input type="checkbox" class="task-cell checkbox">
+          <span style="font-size: x-small">Has Sub-task?</span>
+        </div>
+        <div class="add-self">
+          <button class="bas bas-hide">Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="add-self">
+      <button class="bas bas-root">Add</button>
+    </div>
+  </div>
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/taskmaker.js"></script>
+</body>
+</html>
